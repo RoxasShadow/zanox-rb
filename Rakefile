@@ -4,11 +4,11 @@ require 'rake'
 task default: [ :build, :install, :test ]
 
 task :build do
-  `gem build zanoxrb.gemspec`
+  sh 'gem build zanoxrb.gemspec'
 end
 
 task :install do
-  `gem install *.gem`
+  sh 'gem install *.gem'
 end
 
 task :test do
